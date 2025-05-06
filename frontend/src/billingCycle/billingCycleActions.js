@@ -61,6 +61,6 @@ export function init() {
         showTabs('tabList', 'tabCreate'),
         selectTab('tabList'),
         getList(),
-        initialize('billinCycleForm', INITIAL_VALUES)
+        initialize('billingCycleForm', INITIAL_VALUES)
     ]
 }
