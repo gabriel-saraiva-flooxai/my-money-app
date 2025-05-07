@@ -1,9 +1,5 @@
-import React from "react";
+import React from 'react'
 
 export default props => (
-    <section className="content">
-        <div className="container-fluid">
-            {props.children}
-        </div>
-    </section>
+    <section className='content'>{props.children}</section>
 )
