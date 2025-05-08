@@ -21,8 +21,8 @@ const login = (req, res, next) => {
         if (err) {
             return sendErrorsFromDB(res, err)
         } else if (user && bcrypt.compareSync(password, user.password)) {
-            const token = jwt.sign(user, env.authSecret, {
-                expiresIn: "1 day",
+            const token = jwt.sign({ ...user }, env.authSecret, {
+                expiresIn: "1 day"
             })
             const { name, email } = user
             res.json({ name, email, token })
@@ -46,7 +46,7 @@ const signup = (req, res, next) => {
     const confirmPassword = req.body.confirm_password || ''
     
     if(!email.match(emailRegex)) {
-        return res.status(400).send({errors: ['O e-mail informaod está inválido']})
+        return res.status(400).send({errors: ['O e-mail informado está inválido']})
     }
 
     if(!password.match(passwordRegex)) {
