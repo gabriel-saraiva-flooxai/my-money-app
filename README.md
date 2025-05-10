@@ -52,7 +52,7 @@ Aplicação full-stack para gestão financeira pessoal, permitindo o controle de
 3. **Inicie o servidor backend:**
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    O backend estará disponível em `http://localhost:3003`.
@@ -69,7 +69,7 @@ Aplicação full-stack para gestão financeira pessoal, permitindo o controle de
 5. **Inicie o frontend:**
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    O frontend estará disponível em `http://localhost:8080`.
